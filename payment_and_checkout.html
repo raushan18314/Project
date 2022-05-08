@@ -1,0 +1,268 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+    <title>Checkout & Payment</title>
+    <link rel="icon" href="https://i1.lmsin.net/website_images/in/favicons/max/favicon-32x32.png" />
+    <style>
+         * {
+            font-family: 'Inter', sans-serif;
+        }
+        #nav {
+            padding: 10px 15px;
+            background-color: #F7F8F7;
+            margin-bottom: 20px;
+        }
+        #nav img {
+            height: 40px;
+            vertical-align: middle;
+        }
+        h2 {
+            font-weight: 600;
+            margin-left: 5%;
+        }
+        #method {
+            width: 90%;
+            margin: 0 auto 50px;
+            display: grid;
+            grid-template-columns: 35%;
+            text-align: center;
+        }
+        h3 {
+            font-weight: 500;
+            margin-bottom: 0px;
+            margin-top: 10px;
+        }
+        #method p {
+            margin-top: 5px;
+            color: #9e9e9e;
+            margin-bottom: 10px;
+        }
+        #method > div {
+            border: 2px solid #303AB2;;
+            background-color: aqua;
+        }
+        #chck, #paymethod {
+            width: 90%;
+            margin: 0 auto 50px;
+        }
+        h4 {
+            margin-bottom: 0px;
+        }
+        input, select {
+            border: #9E9E9E solid 1px;
+            width: 550px;
+            height: 40px;
+            outline: none;
+        }
+        #chck p, #paymethod p {
+            margin-bottom: 10px;
+            font-weight: 600;
+            font-size: 15px;
+        }
+        select > option:nth-child(1), span {
+            color: #BDBDBD;
+            font-weight: 400;
+        }
+        .expcvv {
+            display: inline-block;
+            width: 30%;
+            margin-right: 1%;
+        }
+        .expcvv  input {
+            width: 170px;
+            height: 40px;
+        }
+        button {
+            background-color: rgb(10, 14, 207);
+            color: white;
+            width: 300px;
+            height: 50px;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-top-right-radius: 20px;
+            margin-left: 24%;
+        }
+    </style>
+</head>
+<body>
+    <div id="nav">
+        <a href="Mensection.html"> <img src="https://dynamicassets.azureedge.net/uploads/store/logo/5c483f01b2739.png"/> </a>
+    </div>
+    <h2>Shipping method</h2>
+    <div id="method">
+        <div>
+            <h3>Home Delivery</h3>
+            <p>Get your product delivered to your home</p>
+        </div>
+    </div>
+    <div id="chck">
+        <h3>Add your shipping address</h3>
+        <p>Full Name</p>
+        <form>
+        <input type="text" placeholder="Enter your full name"/>
+        </form>
+        <p>Mobile Number</p>
+        <form>
+        <input type="number" placeholder="Enter your mobile number"/>
+        </form>
+        <p>Pincode</p>
+        <form>
+        <input type="number" placeholder="Enter your pincode"/>
+        </form>
+        <p>City</p>
+        <form>
+        <input type="text" placeholder="Enter your city or town"/>
+        </form>
+        <p>State</p>
+        <form>
+        <select>
+            <option value="">Select your state</option>
+            <option value="mh">maharastra</option>
+            <option value="AP">Andhra Pradesh</option>
+            <option value="assam">Assam</option>
+            <option value="UP">Uttar Pradesh</option>
+            <option value="od">odisha</option>
+            <option value="dl">delhi</option>
+            <option value="mp">madhyapradesh</option>
+            <option value="ch">chatishgarh</option>
+            <option value="jh">jharkhand</option>
+            <option value="jm">jammu and kashmir</option>
+            <option value="goa">goa</option>
+            <option value="rj">rajasthan</option>
+            <option value="bh">bihar</option>
+            <option value="ow">west bangle</option>
+        </select>
+        <p>Building name or number</p>
+        <form>
+        <input type="text" placeholder="Enter building name"/>
+        </form>
+        <p>Street name or number</p>
+        <form>
+        <input type="text" placeholder="Flat/House No., floor, building"/>
+        </form>
+        <p>Landmark <span>(optional)</span></p>
+        <form>
+        <input type="text" placeholder="Landmark"/>
+        </form>
+        </form>
+    </div>
+    <h2>Payment Method</h2>
+    <div id="paymethod">
+        <p>Card Number</p>
+        <form>
+        <input type="text" placeholder="Enter your 16 digit card number"/>
+        </form>
+        <p>Name on Card</p>
+        <form>
+        <input type="text" placeholder="Name on Card"/>
+        </form>
+        <div class="expcvv">
+            <p>Expiry Date</p>
+            <form>
+            <input type="number" placeholder="MM"/>
+            <input type="number" placeholder="YYYY"/>
+            </form>
+        </div>
+        <div class="expcvv">
+            <p>CVV</p>
+            <form>
+            <input type="number" placeholder="CVV"/>
+            </form>
+        </div>
+    </div>
+    <button>Pay Now</button>
+</body>
+</html>
+
+
+<script>
+    var con = JSON.parse(localStorage.getItem("contacts"));
+    var frm = document.getElementsByTagName("form");
+    frm[0].childNodes[1].value = con[con.length - 1].First_Name + " " + con[con.length - 1].Last_Name;
+    frm[1].childNodes[1].value = con[con.length - 1].Mobile;
+    var inpt = document.getElementsByTagName("input");
+
+    var state = document.querySelector("select");
+
+    var btn = document.getElementsByTagName("button");
+    btn[0].addEventListener("click", checkPayment);
+
+
+    function checkPayment() {
+        var c = true;
+        for(let j = 0; j<6; j++)
+        {
+            inpt[j].value = inpt[j].value.trim();
+            if(inpt[j].value == "" || inpt[2].value.length != 6 || state.value == "")
+            {
+                c = false;
+                console.log(inpt[j].value);
+            }
+        }
+
+        for(let j = 7; j<12; j++)
+        {
+            inpt[j].value = inpt[j].value.trim();
+            if(inpt[j].value == "")
+            {
+                c = false;
+                console.log(inpt[j].value);;
+            }
+        }
+        if(!c)
+        {
+            alert("Enter correct details");
+        }
+
+        if(c)
+        {
+            if(inpt[7].value.length == 16) 
+            {
+                if(inpt[11].value.length == 3)
+                {
+                    if(+(inpt[9].value) <=12 && +(inpt[9].value) > 0)
+                    {
+                        if(+(inpt[10].value) > 2020)
+                        {
+                            paymentaccep();
+                            for(let j = 2; j<12; j++)
+                            {
+                                inpt[j].value = "";
+                            }
+                            state.value = "";
+                        }
+                        else
+                        alert("Card expired");
+                    }
+                    else
+                    alert("Enter valid date");
+                }
+                else
+                alert("Invalid CVV")
+            }
+            else
+            alert("Invalid Card Number");
+            
+        }
+        
+    }
+
+    function paymentaccep() {
+        setTimeout(paymentaccepted, 4000)
+    }
+
+    function paymentaccepted() {
+        alert("Payment Successful");
+        let X = [];
+        localStorage.setItem("cart",JSON.stringify(X));
+        setTimeout(takeToHome, 5000);
+    }
+
+    function takeToHome() {
+        window.location.href = "Mensection.html";
+    }
+</script>

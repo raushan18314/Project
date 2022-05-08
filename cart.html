@@ -1,0 +1,631 @@
+
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    
+        <title>Online Shopping at Max</title>
+        <link rel="icon" href="https://i1.lmsin.net/website_images/in/favicons/max/favicon-32x32.png" />
+    
+        <style>
+          
+        
+                    * {
+                font-family: 'Inter', sans-serif;
+            }
+    
+            #apply_code {
+                width: 400px;
+                height: 55px;
+                margin-left: 95px;
+            }
+            #bskt {
+                margin-top: 40px;
+                margin-bottom: 40px;
+                margin-left: 34px;
+                
+            }
+    
+            #bskt > p {
+                font-size: 15px;
+                
+            }
+            #bottom {
+                width:90% ;
+                margin: auto;
+               
+                display: grid;
+                grid-template-columns: 70% 30%;
+                
+            }
+            #cart {
+                display: inline-block;
+                width: 7%;
+            } 
+            #cart > i, #cart > button {
+                vertical-align: middle;
+            } 
+            .cat:hover {
+                color: #303AB2;
+            }
+            #checkout {
+                margin: 30px 20px;
+                width: 80%;
+                border-top-left-radius: 20px;
+                border-bottom-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+         
+            }
+            #right {
+                border: 1px solid #b1b7ca;
+                height: 320px;
+               
+            }
+          
+            .promo_btn {
+                width:200px;
+                height: 60px;
+                background-color: rgb(19, 45, 197);
+                font-weight: 900;
+                font-size: medium;
+                color: white;
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                
+            }
+            .check_btn {
+               
+    
+    
+                font-size: medium;
+                color: white;
+                font-weight: 900;
+                width: 100%;
+                background-color: rgb(70, 8, 185);
+                height: 50px;
+                border-bottom-left-radius: 20px;
+                border-top-left-radius: 20px;
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+                
+            }
+            #checkout1 {
+                width: 100%;
+               padding : 10px;
+    
+            
+            }
+            #cards {
+                display: grid;
+                grid-template-columns: 16% 16% 16% 16% 16%;
+                gap: 3%;
+                margin: 10px 10px;
+                
+                
+            }
+            #cards img {
+               width: 100%;
+            }
+           
+            #container img {
+                width: 150px;
+                height: 150px;
+            }
+            .footer {
+                display: flex;
+                padding: 3%;
+                margin-top: 0px;
+            }
+            .footer > div {
+                margin: 0 3%;
+                font-size: smaller;
+                flex-basis: 14%;
+            }
+            .footer p {
+                font-weight: 300;
+            }
+            hr {
+                size: 1px;
+                color: #f1ebeb;
+            }
+            #nav {
+                padding: 10px 15px;
+                background-color: #F7F8F7;
+                margin-bottom: 20px;
+            }
+            #nav img {
+                height: 40px;
+                vertical-align: middle;
+            }
+            #nav button {
+                height: 40px;
+                vertical-align: middle;
+                width: 70px;
+                border: none;
+                background-color: #F7F8F7;
+                font-weight: 600;
+            }
+            #search > input {
+                height: 36px;
+                vertical-align: middle;
+                width: 94%;
+                outline: none;
+                border: none;
+                background-color: #ECEDEB;
+                vertical-align: middle;
+            }
+            #hicust {
+                display: inline-block;
+                width: 100px;
+                border-right: 1px solid #ECEDEB;
+            }
+            #hicust > button {
+                width: 95px;
+            }
+            h1 {
+                font-weight: 400;
+                margin-left: 5%;
+                line-height: 80px;
+            }
+            #max img {
+                width: 20%;
+                margin-right: 10px;
+            }
+            .offr {
+                margin-left: 5%; 
+                background-color: #EF9A9A;
+                padding: 5px;
+                line-height: 30px;
+                
+            }
+            #offer {
+                background-color: #303AB2;
+                text-align: center;
+                color: white;
+                padding: 1px;
+            }
+            #sec {
+                margin-top: 20px;
+            }
+            #search {
+                background-color: #f4f7f2;
+                display: inline-block;
+                width: 35%;
+                margin-right: 14%;
+            }
+            #search i {
+                color: #c03030;
+                vertical-align: middle;
+            }
+           
+            td {
+                width: 300px;
+                text-align: center;
+    
+            }
+            #product_count {
+                width: 25px;
+                height: 25px;
+                background-color: tomato;
+                border: none;
+                border-radius: 50%;
+                position: relative;
+                text-align: center;
+                bottom: 15px;
+                right: 15px;
+                font-size: smaller;
+                outline: none;
+            }
+            #product_count::-webkit-outer-spin-button, #product_count::-webkit-inner-spin-button {
+                -webkit-appearance: none;
+            }
+          #icon td {
+           
+              display: none;
+              
+          }
+          button:hover, img:hover{
+                cursor: pointer;
+            }
+         #fthr {
+             margin-top: 50px;
+         }
+         select {
+             outline: none;
+         }
+        </style>
+    </head>
+    <body>
+    
+        
+        <div id="nav">
+            <a href="Mensection.html"> <img src="https://dynamicassets.azureedge.net/uploads/store/logo/5c483f01b2739.png"/> </a>
+            <a href="women.html"><button class="cat">Women</button></a>
+            <a href="Mensection.html"><button class="cat">Men</button></a>
+            <a href=""><button class="cat">Girls</button></a>
+            <a href="boysSection.html"><button class="cat">Boys</button></a>  
+            <div id="search">
+                <i class='bx bx-search'> </i>
+                <input placeholder="What are you looking for?"/>
+            </div>
+            <a href="../index.html">
+                <div id="hicust">
+                    <button id="hi"></button>  
+                </div>
+            </a>   
+            <a href="cart.html">
+    
+               
+                <div id="cart">
+                    <button>Basket</button>
+                    <i class='bx bxs-briefcase'></i>
+    
+                   
+                </div>     
+                <input id="product_count" type="number" readonly = "readonly"/>
+            </a>
+    
+            <div id="sec">
+                <p>Tops &nbsp; Bottoms &nbsp;  Essentials &nbsp;Indian Wear &nbsp; Accessiories &nbsp;  Shoes &nbsp;More</p>
+             <hr>
+            </div>
+        </div>
+    
+        <div id="bskt">
+            <h1>Your Shopping Basket</h1>
+            <p><span class="offr">Get the offer</span> Flat 500 off on shopping worth 2,999 and above. Use code: MAX500</p>
+            <p><span class="offr">Get the offer</span> Flat 250 off on shopping worth 1,999 and above. Use code: MAX250</p>
+            <p><span class="offr">Get the offer</span> Flat 1,000 off on shopping worth 4,499 and above. Use code: MAX1K</p>
+    
+    
+        </div>
+        
+    
+        
+        <div id="bottom">
+    
+          <div id="left">
+            <form action="">
+                <table id="container" >
+                  <tr id="icon" >
+                    <td id="item"   >Item</td>
+                    <td id="des" >Description</td>
+                    <td id="price"  >Price</td>
+                    <td id="qty" >Quantity</td>
+                    <td >Totalprice</td>
+                    
+                  </tr>
+                 
+           
+                  <div style="border: 1px solid rgb(164, 177, 194);  display: grid; grid-template-columns: 30% 20% 5% 20% 18%;gap: 2%;width: 91%; margin: auto; padding: 10px;text-align: start;">
+                     
+                    <div>Item</div>
+                     <div>Description</div>
+                     <div>Price</div>
+                     <div style=" text-align: end; ">Quantity</div>
+                     <div style=" text-align: end;">Total Price</div>
+                  </div> 
+                  
+                </table >
+              
+               
+               
+    
+            </form>
+    
+          
+          </div>
+    
+          <div id="right">
+            
+            <div id="checkout1" >
+                <label  style="font-weight :700;">Subtotal (<span id="count"></span> ) :</label>
+                <input type="number"   id="total" readonly = "readonly">
+    
+               
+            </div>
+            <hr>
+    
+            <div id="checkout">
+                <a href="checkout&payment.html"><button  class="check_btn">Checkout Now</button></a> 
+            </div>
+    
+            <hr>
+            <div id="cards">
+                <div><img src="https://i1.lmsin.net/website_images/ae/checkout/logo-paypal.png" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/ae/checkout/logo-visa.png" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/ae/checkout/logo-mc.png" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/in/checkout/logo-rupay.svg" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/ae/checkout/logo-cash.png" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/in/checkout/logo-netbanking.svg" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/in/checkout/logo-wallet.svg" alt=""></div>
+                <div><img src="https://i1.lmsin.net/website_images/in/checkout/logo-rewards.svg" alt=""></div>
+            </div>
+            <hr>
+           
+            <div>
+                <i style="font-size:15px; color:rgb(194, 188, 188);" class="fa">&#xf073; Congrats! You can pay for this order in easy installments</i> 
+            </div>
+           
+            
+        
+          </div>
+    
+    
+    
+        </div> 
+        <div>
+            <input type="text" placeholder="Enter Promo Code" id="apply_code" >
+            <span><button class="promo_btn"  onclick="apply()">Apply</button></span>
+        </div>
+    
+        
+          <hr id="fthr"/>
+    
+        <div class="footer">
+            <div>
+                <h4>Women</h4>
+                <p>Tops</p>
+                <p>Dresses & Jumpsuits</p>
+                <p>Sportswear</p>
+                <p>Bottoms</p>
+                <p>Winterwear</p>
+                <p>Ethnicwear</p>
+                <p>Sleepwear</p>
+                <p>Accessories</p>
+            </div>
+            <div>
+                <h4>Men</h4>
+                <p>Tops</p>
+                <p>Bottoms</p>
+                <p>Sportswear</p>
+                <p>Winterwear</p>
+                <p>Accessories</p>
+                <p>Shoes</p>
+            </div>
+            <div>
+             <h4>Girls</h4>
+             <p>Tops</p>
+             <p>Bottoms</p>
+             <p>Sportswear</p>
+             <p>Winterwear</p>
+             <p>Accessories</p>
+             <p>Shoes</p>
+            </div>
+            <div>
+             <h4>Boys</h4>
+             <p>Tops</p>
+             <p>Bottoms</p>
+             <p>Sportswear</p>
+             <p>Winterwear</p>
+             <p>Accessories</p>
+             <p>Shoes</p>
+            </div>
+            <div>
+                 <h4>Explore</h4>
+                <p>Offers</p>
+                <p>Magazine</p>
+            </div>
+        </div>
+        <div class="footer">
+         <div>
+             <h4>About</h4>
+             <p>About us</p>
+             <p>Write to us</p>
+             <p>Careers</p>
+             <p>Take a Tour</p>
+             <p>Blog</p>
+             <p>Store Locator</p>
+         </div>
+         <div>
+             <h4>Help</h4>
+             <p>Contact us</p>
+             <p>Shipping</p>
+             <p>Returns Process</p>
+             <p>Returns Policy</p>
+             <p>Help Centre</p>
+         </div>
+        </div>
+         
+    </body>
+    </html>
+    <script>
+        var welcome = document.getElementById("hi");
+        var con = JSON.parse(localStorage.getItem("contacts"));
+        welcome.textContent = "Hi, " + con[con.length - 1].First_Name;
+    
+        
+        let cnt = document.getElementById("product_count");
+        let product_cart = JSON.parse( localStorage.getItem("cart"));
+        cnt.value = product_cart.length;
+    
+    
+    
+    
+       let parent = document.getElementById("container");
+       let cart =  JSON.parse(localStorage.getItem("cart"));
+       let total = document.getElementById("total");
+       let count = document.getElementById("count");
+    
+        let sum =0;
+        let coun = 0;
+        let flag = false;
+        
+       
+     
+    
+    cart.forEach(function(product){
+    
+       
+        let row= document.createElement("tr");
+       
+      
+         let column1 = document.createElement("td");
+         let img =document.createElement("img");
+         img.src = product.image
+         column1.appendChild(img);
+    
+         let column2 = document.createElement("td");
+       let product_name = document.createElement("p");
+       product_name.textContent = product.description;
+       column2.appendChild(product_name);
+    
+       let column3 = document.createElement("td");
+       let product_price = document.createElement("p");
+        product_price.textContent = product.price;
+        column3.appendChild(product_price);
+    
+        let column4 = document.createElement("td");
+        let qty = document.createElement("select");
+        let opt1 = document.createElement("option");
+        opt1.value = "1";
+        opt1.innerText = "1";
+        let opt2 = document.createElement("option");
+        opt2.value = "2";
+        opt2.innerText = "2";
+        let opt3 = document.createElement("option");
+        opt3.value = "3";
+        opt3.innerText = "3";
+    
+        qty.append(opt1,opt2,opt3);
+    
+        column4.appendChild(qty);
+    
+    
+        let column5 = document.createElement("td");
+        let total_price = document.createElement("p");
+        total_price.textContent = product.price;
+    
+        column5.appendChild(total_price);
+    
+    
+        qty.onmouseleave = function () {
+    
+            cal_total(event);
+    
+        }
+    
+        qty.onfocus = function () {
+    
+       check(event);
+    
+       }
+    
+        
+    
+       
+       
+    
+     
+        
+    
+    
+    
+        sum = sum + +(product.price);
+        total.value = sum;
+        coun++;
+    
+        product_price.setAttribute("class", "bolder");
+    
+        row.append(column1, column2, column3,column4,column5);
+        
+    
+       container.appendChild(row);
+    
+      
+    
+       
+    
+    });
+    
+     
+    count.append(coun);
+    
+    var c = false;
+    
+    
+    function apply() {
+           let app = document.getElementById("apply_code").value;
+         
+           if ((app == "MAX250") && (total.value>1999) && (!c)){
+               c = true;
+              total.value = total.value - 250;
+               
+             
+                  alert ("Promocode Applied Successfully");
+                  document.getElementById("apply_code").value = "";
+              
+           }
+       
+           else if 
+            ((app == "MAX500") && (total.value>2999)  && (!c)){
+                c = true;
+              total.value = total.value - 500;
+              
+              
+                  alert ("Promocode Applied Successfully");
+                  document.getElementById("apply_code").value = "";
+           
+            }
+    
+            else if 
+            ((app == "MAX1K") && (total.value>4499)  && (!c)){
+                c = true;
+              total.value = total.value - 1000;
+              
+              
+                  alert ("Promocode Applied Successfully");
+                  document.getElementById("apply_code").value = "";
+              
+              
+            } else if (c) {  
+                alert ("Promocode Already Applied")
+    
+            }
+            else {
+                alert ("Invalid Promocode")
+            }
+            
+          
+    
+    }
+    
+    function check(event){
+         flag = true;
+     }
+    
+    function cal_total(event) {
+        
+        event.target.blur();
+    
+        if (c && flag){
+            c = false;
+            alert ("Promocode Removed");
+        }
+         if (flag){
+            var x = event.target.parentNode.parentNode;
+    
+        var x = event.target.parentNode.parentNode;
+          
+          x.childNodes[4].childNodes[0].innerText = +(x.childNodes[3].childNodes[0].value) * +(x.childNodes[2].childNodes[0].innerText);
+          total.value = "0";
+      
+          for(let i= 2; i<parent.childNodes.length;i++){
+      
+              total.value = +(total.value) + (+parent.childNodes[i].childNodes[4].childNodes[0].innerText);
+          }
+    
+          flag = false;
+           
+         }
+     }
+    
+    
+       
+    </script>
