@@ -1,0 +1,393 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Max</title>
+    <link rel="stylesheet" href="/common.css">
+    <link rel="stylesheet" href="home.css">
+</head>
+<style>
+    #top{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+    h1{
+        font-family: sans-serif;
+        margin-top:2cm;
+        margin-left: 3cm;
+    
+
+    }
+    #title{
+        height:2cm;
+        width: 25cm;
+        
+        margin-left: 4cm;
+        display: flex;
+    }
+    #inner{
+        height:100%;
+        width: 5cm;
+        justify-content: space-between;
+        
+        margin:auto;
+        display: flex;
+    }
+    #inner>div{
+        width:40%;
+        height:100%;
+        
+       
+    }
+     #photo>img{
+        height:100%;
+        width:100%;
+    }
+    p{
+        font-size: 20px;
+        
+        font-weight: 100;
+        font-family: sans-serif;
+        margin-left: -0.3cm;
+    }
+    h2{
+        font-family: sans-serif;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        grid-template-rows: repeat(4,auto);
+        gap:10px;
+        margin:auto;
+        width:90%;
+        margin-top: 1cm;
+
+    }
+    #container>img{
+        height:8cm;
+    }
+    h3{
+        font-family: sans-serif;
+        margin-top: -5px;
+    }
+    button{
+        background-color: blue;
+        color: rgb(12, 11, 11);
+        width:95%;
+        height:1cm;
+        border: blue;
+        margin:auto;
+        font-weight: 100;
+    }
+   h4{
+      
+       font-family: sans-serif;
+       margin-top: -1px;
+   }
+   
+    select{
+        width:3.5cm;
+        margin-left:1cm;
+        margin-top: 1cm;
+        font-family: sans-serif;
+        height:1cm;
+        font-weight: 300;
+    }
+    .bottoms {
+    display: flex;
+    padding: 3%;
+    margin-top: 0px;
+   }
+   .bottoms > div {
+    margin: 0 3%;
+    font-size: smaller;
+    flex-basis: 14%;
+   }
+   .bottoms p {
+    font-weight: 300;
+   }
+   h4{
+       font-size: medium;
+   }
+   
+
+
+</style>
+<body>
+    <div id="navbar">
+        <a href=""> <img src="https://dynamicassets.azureedge.net/uploads/store/logo/5c483f01b2739.png"/> </a>
+        <a href="..\homePage\homewomen.html"><button>Women</button></a>
+        <a href="..\MenPage\homeMen.html"><button>Men</button></a>
+        <a href="..\GirlsPage\HomeGirl.html"><button>Girls</button></a>
+        <a href="..\BoysPage\homeBoy.html"><button>Boys</button></a>  
+        <div id="search">
+            <i class='bx bx-search'> </i>
+            <input placeholder="What are you looking for?"/>
+        </div>
+        <a href="..\SignupPage\Signup.html">
+       <div id="abc">
+                <button>Sign Up-Sign In</button>  
+            </div>
+        </a>
+        <a href="..\BasketPage\cart.html">
+            <div id="cart">
+                <button>  | Basket</button>
+            </div>     
+        </a> 
+       </div>
+       <div id="top">
+        <p>Tops</p>
+        <p>Bottoms</p>
+        <p>Essentials</p>
+        <p>Accessories</p>
+        <p>Footwear</p>
+        <p>Baby Girl (0-2Yrs)</p>
+        <p>Indian Wear</p>
+        <p>Winterwear</p>
+        <p>Online Exclusive</p>
+        <p> |  More</p>
+       </div> 
+
+    <h1>You Searched For""</h1>
+    <div id="title">
+        <div id="inner">
+             <h2>Shop For</h2>
+         </div>
+        <div id="inner">
+            <div id="photo">
+                
+                <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX_SubCatImg/maxmen-tops-casualshirts.jpg">
+            </div>
+            <div>
+                <p>Casual Shirts</p>
+            </div>
+        </div>
+        <div id="inner">
+            <div id="photo">
+                
+                <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX_SubCatImg/maxmen-tops-formalshirts.jpg">
+            </div>
+            <div>
+                <p>Formal Shirts</p>
+            </div>
+        </div>
+        <div id="inner">
+            <div id="photo">
+                
+                <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX_SubCatImg/maxmen-tops-jackets.jpg">
+            </div>
+            <div>
+                <p>Jackets</p>
+            </div>
+        </div>
+        <div id="inner">
+            <div id="photo">
+                
+                <img src="https://70415bb9924dca896de0-34a37044c62e41b40b39fcedad8af927.lmsin.net/MAX-Friday/MAX2.O/MAX_SubCatImg/maxmen-tops-polos.jpg">
+            </div>
+            <div>
+                <p>Polos</p>
+            </div>
+        </div>
+        
+    </div>
+    <form id="form">
+        <select name="" id="select">
+            <option value="none">Select a Category</option>
+            <option value="NIKE">Roadster</option>
+            <option value="PUMA">Dennis Lingo</option>
+            <option value="G.A.S.">HIGHLANDER</option>
+        </select>
+        <select name="">
+            <option value="none">Select</option>
+            <option value="low to High">Low to High</option>
+            <option value ="high to low">High to low</option>
+        </select>
+      
+        
+    </form> 
+           
+            
+       
+    
+
+    <div id="container">
+        <div>
+        </div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+
+    <div class="bottoms">
+        <div>
+            <h4>Women</h4>
+            <p>Tops</p>
+            <p>Dresses & Jumpsuits</p>
+            <p>Sportswear</p>
+            <p>Bottoms</p>
+            <p>Winterwear</p>
+            <p>Ethnicwear</p>
+            <p>Sleepwear</p>
+            <p>Accessories</p>
+        </div>
+        <div>
+            <h4>Men</h4>
+            <p>Tops</p>
+            <p>Bottoms</p>
+            <p>Sportswear</p>
+            <p>Winterwear</p>
+            <p>Accessories</p>
+            <p>Shoes</p>
+        </div>
+        <div>
+         <h4>Girls</h4>
+         <p>Tops</p>
+         <p>Bottoms</p>
+         <p>Sportswear</p>
+         <p>Winterwear</p>
+         <p>Accessories</p>
+         <p>Shoes</p>
+        </div>
+        <div>
+         <h4>Boys</h4>
+         <p>Tops</p>
+         <p>Bottoms</p>
+         <p>Sportswear</p>
+         <p>Winterwear</p>
+         <p>Accessories</p>
+         <p>Shoes</p>
+        </div>
+        <div>
+             <h4>Explore</h4>
+            <p>Offers</p>
+            <p>Magazine</p>
+        </div>
+    </div>
+    <div class="bottoms">
+     <div>
+         <h4>About</h4>
+         <p>About us</p>
+         <p>Write to us</p>
+         <p>Careers</p>
+         <p>Take a Tour</p>
+         <p>Blog</p>
+         <p>Store Locator</p>
+     </div>
+     <div>
+         <h4>Help</h4>
+         <p>Contact us</p>
+         <p>Shipping</p>
+         <p>Returns Process</p>
+         <p>Returns Policy</p>
+         <p>Help Centre</p>
+     </div>
+    
+</body>
+</html>
+<script>
+    var data=[{img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1376577/2022/4/18/d335c205-fb51-4e31-b709-b9475a3091c11650284973257RoadsterMenBlackGreyCheckedCasualSustainableShirt1.jpg",
+              name:"Roadster",
+             
+             
+              disc:"₹ 674"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/7488102/2019/8/22/8002a744-0dad-4dbb-9481-cf0090134c3b1566454086786-Dennis-Lingo-Men-Pink-Slim-Fit-Solid-Casual-Shirt-9891566454-1.jpg",
+              name:"Dennin Lingo",
+              disc:"₹ 684"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2050688/2018/2/5/11517823120338-HIGHLANDER-Men-White-Slim-Fit-Solid-Casual-Shirt-5911517823120124-1.jpg",
+              name:"HIGHLANDER",
+              disc:"₹ 849"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1364628/2016/8/31/11472636737718-Roadster-Men-Blue-Regular-Fit-Printed-Casual-Shirt-6121472636737160-1.jpg",
+              name:"Roadster",
+              disc:"₹ 704"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/7488103/2019/8/22/acfba45f-8f9c-4b97-b5bc-a909418bdf4c1566454100620-Dennis-Lingo-Men-Green-Slim-Fit-Solid-Casual-Shirt-358156645-3.jpg",
+              name:"Dennin Lingo",
+              disc:"₹ 684"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/9260157/2019/6/1/3d64b990-f3e3-4038-ab71-9a06a71dbe9c1559376771478-HERENOW-Men-Shirts-5171559376770146-5.jpg",
+              name:"HIGHLANDER",
+              disc:"₹ 1,049"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15411378/2021/9/8/d0395678-cf43-4125-ae49-d4742dfe53861631112953603GANTMenOrangeOpaqueStripedCasualShirt1.jpg",
+              name:"Dennin Lingo",
+              disc:"₹ 2,799"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/9951411/2019/8/5/fe1322b7-9e53-4b6e-8423-0a4f5a9e8b4b1565006161882-Roadster-Men-Shirts-8701565006159466-1.jpg",
+              name:"Roadster",
+              disc:"₹ 749"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10456354/2019/8/22/a05d2136-184e-4456-8db5-3142fd1bc13c1566454760466-Campus-Sutra-Men-Colourblocked-Casual-Spread-Shirt-290156645-4.jpg",
+              name:"Roadster",
+              disc:"₹ 644"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/10398211/2019/11/25/7ab8bc06-f264-45e3-82bf-7c79f02812211574658986116-Roadster-Men-Shirts-8711574658983724-1.jpg",
+              name:"HIGHLANDER",
+              disc:"₹ 1,050"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2347555/2019/12/3/77c23017-fd9d-4ad8-95f5-8722154e85ac1575361938857-HIGHLANDER-Men-White--Blue-Slim-Fit-Striped-Casual-Shirt-304-1.jpg",
+              name:"Dennin Lingo",
+              disc:"₹ 643"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/15353806/2021/10/28/7410d6bc-3d89-4eae-b9ad-79aef36824961635400011540-Nautica-Men-Shirts-5501635400010093-1.jpg",
+              name:"Roadster",
+              disc:"₹ 1,979"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/8889611/2019/3/20/3eae8fb4-b7ca-4e01-80bf-d1e59ab1568d1553080254589-Roadster-Men-Black--White-Regular-Fit-Checked-Casual-Shirt-9-1.jpg",
+              name:"HIGHLANDER",
+              disc:"₹ 599"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1729391/2019/8/28/a9d4a7aa-af7e-4a37-a9d4-a94dc8c057e81566992341974-WROGN-Navy-Blue-Slim-Fit-Checked-Casual-Shirt-52415669923403-1.jpg",
+              name:"Dennin Lingo",
+              disc:"₹ 1,499"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/2284691/2018/1/29/11517205743041-Roadster-Men-Black-Regular-Fit-Solid-Casual-Shirt-2871517205742822-1.jpg",
+              name:"Roadster",
+              disc:"₹ 599"},
+              {img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,fl_progressive/assets/images/1265384/2018/2/7/11517995803801-Highlander-White-Slim-Fit-Casual-Shirt-7581517995803601-2.jpg",
+              name:"HIGHLANDER",
+              disc:"₹ 519"},
+              
+
+]
+
+  var filter = document.querySelector("#select")
+  function display(deta) {
+ data.forEach(function(elem) {
+      var box = document.createElement("div")
+      var image=document.createElement("img")
+      image.src = elem.img
+      var name = document.createElement("h3")
+      name.innerText=elem.name
+      var disc = document.createElement("h4")
+      disc.innerText=elem.disc
+      var button = document.createElement("button")
+      button.innerText ="ADD TO BASKET"
+
+      box.append(image,disc,name,button)
+      document.querySelector("#container").append(box);
+   })
+  }
+
+  display(data)
+ filter.addEventListener("change",function(){
+     if(filter.value=="none")
+     {
+         display(data)
+     }
+     else{
+         var filtered = data.filter(function(elem){
+             return elem.name == filter.value;
+         })
+
+         display(filtered)
+     }
+ })
+
+
+</script>

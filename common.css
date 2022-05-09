@@ -1,0 +1,38 @@
+
+#navbar {
+    padding: 10px 15px;
+    background-color: #F7F8F7;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content: space-between;
+}
+#navbar img {
+    height: 40px;
+    vertical-align: middle;
+    
+}
+#navbar button {
+    height: 5px;
+    vertical-align: middle;
+    width: 115px;
+    border: none;
+    background-color: #F7F8F7;
+    font-weight: 600;
+    
+}
+#search > input {
+    height: 36px;
+    vertical-align: middle;
+    width: 100%;
+    border: none;
+    background-color: #ECEDEB;
+    vertical-align: middle;
+    
+}
+
+
+
+
+
+
+

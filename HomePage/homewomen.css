@@ -1,0 +1,141 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+body{
+    margin-left: 40px;
+}
+#top{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+
+.bottoms {
+    display: flex;
+    padding: 3%;
+    margin-top: 0px;
+}
+.bottoms > div {
+    margin: 0 3%;
+    font-size: smaller;
+    flex-basis: 14%;
+}
+.bottoms p {
+    font-weight: 300;
+}
+hr{
+    width: 90%;
+    margin-left: 19px;
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+#blue{
+    width: 100%;
+    height: 35px;
+    font-weight: 600;
+    text-align: center;
+    background-color: blue;
+    color: white;
+    font-size: 15px;
+}
+
+#back{
+    width: 90%;
+    margin-left: 20px;
+}
+#back>img{
+    width: 100%;
+}
+#lingerie{
+    width: 90%;
+    margin-left: 20px;
+}
+#lingerie>img{
+    width: 100%;
+    
+}
+#catego{
+    width: 90%;
+    height: 220px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.women{
+    width: 100%;
+    height: 200px;
+    margin-left: 20px;
+    margin-bottom: 10px;
+    
+}
+h3{
+    text-align: center;
+}
+.women>img{
+    width: 100%;
+    height: 200px;
+    border-radius: 200px;
+   
+}
+#sneaker{
+    width: 90%;
+    margin-left: 20px;
+}
+#sneaker>img{
+    width: 100%;
+}
+#trend{
+    width: 90%;
+    margin-left: 20px;
+}
+#trend>img{
+    width: 31%;
+    margin: 5px;
+}
+#twopic{
+    width: 90%;
+    height: auto;
+    display: flex;
+    justify-content:space-between;
+    margin-left: 20px;
+}
+#twopic>img{
+    width: 49%;
+    height: auto;
+    margin-left: 5px;
+
+}
+#onepics>{
+    width: 92%;
+    margin-bottom: 20px;
+}
+#onepics>img{
+    width: 90%;
+    margin-left: 20px;
+}
+#gift{
+    width: 100%;
+    margin-left: 20px; 
+}
+#gift>img{
+   width: 90%;
+   height: 250px;
+  
+}
+#connect{
+    width: 90%;
+    margin-left: 20px;
+}
+#connect>img{
+    width: 100%;
+}
+h1{
+    font-family: sans-serif;
+    
+}
+
+

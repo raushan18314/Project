@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   
+    <title>Sign in Page</title>
+    <style>
+        #box{
+            width:530px;
+            height:auto;
+            border: 1px solid gray;
+            margin: auto;
+            padding:4px 4px 1px 4px;
+            margin-top: 80px;
+            box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+            background-color: rgb(12, 63, 46);
+            border-radius: 3px;
+            
+        }
+        
+        #container{
+            width:auto;
+            height:auto;
+            border: 1px solid gray;
+            margin: auto;
+            padding:20px;
+            margin-top: 10px;
+            /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+            background-color: antiquewhite;
+        }
+        #img1{
+             width:50px;
+             height: 50px;
+             border-radius: 50%;
+             position: relative;
+             margin-top: -3px;
+        }
+        #urm{
+            padding: 8px;
+            width:400px;
+            font-size: 15px;
+            position:absolute;
+           
+        }
+        #img2{
+            width:50px;
+             height: 50px; 
+             position: relative;
+             border-radius: 50%;
+           
+        }
+        #emid{
+            padding: 8px;
+            width:400px;
+            font-size: 15px;
+            position:absolute;
+        }
+        #submit{
+           padding: 10px 30px 10px 30px;
+           border-radius: 5px;
+           background-color: rgb(96, 100, 99);
+           margin-left:200px;
+           color: bisque;
+           font-size: 15px;
+
+        }
+        p{
+            color: rgb(73, 73, 72);
+        }
+        #psw{
+            padding: 8px;
+            width:400px;
+            font-size: 15px;
+            position:absolute;
+            margin-left: 5px;
+
+        }
+        #img3{
+            width:40px;
+             height: 40px; 
+             position: relative;
+             margin-left: 5px;
+             border-radius: 50%;
+        }
+    </style>
+</head>
+<body>
+    <div id="navbar">
+        <a href=""> <img src="https://dynamicassets.azureedge.net/uploads/store/logo/5c483f01b2739.png"/> </a>
+        <a href="..\WomenPage\Women.html"><button>Women</button></a>
+        <a href=""><button>Men</button></a>
+        <a href="Girls.html" class="aaa"><button>Girls</button></a>
+        <a href="..\BoysPage\homeBoy.html"><button>Boys</button></a>  
+        <div id="search">
+            <i class='bx bx-search'> </i>
+            <input placeholder="What are you looking for?"/>
+        </div>
+       <div id="abc">
+                <button>Sign Up-SignIn</button>  
+            </div>
+        </a>
+        <a href="..\BasketPage\cart.html">
+            <div id="cart">
+                <button>|  Basket</button>
+            </div>     
+        </a>
+
+        </div>
+    <div id="box">
+     
+        <div id="container">
+            <h1>Sign up</h1>
+            <p id="para1">Enjoy the convenience of a single account across all participating brands</p>
+            <form >
+                
+                
+                <img  id="img2" src="https://thumbs.dreamstime.com/b/email-icon-isolated-white-background-email-icon-trendy-design-style-email-icon-isolated-white-background-email-icon-183701610.jpg"/>
+                <input id="emid" placeholder="Enter Email id"/><br>
+                <img id="img3" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQndwgJyIwhGHk4J208WKAud8XP9pG-ANZEog&usqp=CAU"/>
+                <input id="psw" placeholder="Password"/><br><br>
+               <input id="submit" type="submit"/>
+            </form>
+          </div>
+    </div>
+    
+</body>
+</html>
+
+<script>
+    form  = document.querySelector("form")
+    var userdata = JSON.parse(localStorage.getItem("userdata"))
+    form.addEventListener("submit",function(event){
+          event.preventDefault();
+          var data = {
+              email:form.emid.value,
+              password:form.psw.value,
+          }
+          if(userdata==null){
+              alert("Please SignUp first")
+          }
+          else if(userdata.emid==data.emid && userdata.psw==data.psw){
+              alert("Sign in Successful")
+              localStorage.setItem("signin",JSON.stringify("userdata"))
+              window.location.href=""
+          }
+          else{
+               alert("User does not exist")
+          }
+
+      })
+</script>

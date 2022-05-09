@@ -1,0 +1,87 @@
+#top{
+    width: 80%;
+    height: 40px;
+    display: flex;
+    margin-top: 15px;
+    justify-content: space-between;
+    margin-left: 20px;
+}
+     h1{
+        font-family: sans-serif;
+        margin-top:2cm;
+        margin-left: 3cm;
+    }
+    #title{
+        height:2cm;
+        width: 25cm;
+        margin-left: 4cm;
+        display: flex;
+    }
+    #inner{
+        height:100%;
+        width: 5cm;
+        justify-content: space-between;
+        
+        margin:auto;
+        display: flex;
+    }
+    #inner>div{
+        width:40%;
+        height:100%;
+        
+       
+    }
+     #photo>img{
+        height:100%;
+        width:100%;
+    }
+    p{
+        font-size: 20px;
+        
+        font-weight: 100;
+        font-family: sans-serif;
+        margin-left: -0.3cm;
+    }
+    h2{
+        font-family: sans-serif;
+    }
+    #container{
+        display: grid;
+        grid-template-columns: repeat(4,auto);
+        grid-template-rows: repeat(4,auto);
+        gap:10px;
+        margin:auto;
+        width:90%;
+        margin-top: 1cm;
+
+    }
+    #container>img{
+        height:8cm;
+    }
+    h3{
+        font-family: sans-serif;
+        margin-top: -5px;
+    }
+    button{
+        background-color: blue;
+        color: rgb(10, 10, 10);
+        width:95%;
+        height:1cm;
+        border: blue;
+        margin:auto;
+        font-weight: 100;
+    }
+   h4{
+      
+       font-family: sans-serif;
+       margin-top: -1px;
+   }
+  
+    select{
+        width:3.5cm;
+        margin-left:1cm;
+        margin-top: 1cm;
+        font-family: sans-serif;
+        height:1cm;
+        font-weight: 300;
+    }
