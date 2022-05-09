@@ -35,7 +35,7 @@
         height:100%;
         width:100%;
     }
-    p{
+    p1{
         font-size: 20px;
         
         font-weight: 100;
@@ -85,3 +85,23 @@
         height:1cm;
         font-weight: 300;
     }
+    .bottoms {
+        display: flex;
+        padding: 3%;
+        margin-top: 0px;
+    }
+    .bottoms > div {
+        margin: 0 3%;
+        font-size: smaller;
+        flex-basis: 14%;
+    }
+    .bottoms p {
+        font-weight: 300;
+    }
+    hr{
+        width: 90%;
+        margin-left: 19px;
+        margin-top: 40px;
+        margin-bottom: 30px;
+    }
+   

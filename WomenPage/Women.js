@@ -52,9 +52,81 @@ var data=[{img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,
 
 ]
 
-  var filter = document.querySelector("#select")
-  function display(deta) {
+document.querySelector("#select").addEventListener("change",brand)
+function brand (){
+    var selected = document.getElementById("select").value
+    var filtered = data.filter(function(elem){
+        return elem.name == selected
+    })
+    display(filtered)
+    console.log(filtered)
+}
+
+document.querySelector("#price").addEventListener("change",sortbyp)
+function sortbyp(){
+    var selected = document.querySelector("#price").value
+    if(selected=="HTL")
+        {
+          data.sort(function(a,b){
+            return b.disc-a.disc
+          })
+          display(data)
+          //console.log(data)
+        }
+
+        if(selected=="LTH")
+        {
+          data.sort(function(a,b){
+            return a.disc-b.disc
+          })
+          display(data)
+          //console.log(data)
+        }
+      }
+
+      document.querySelector("#sort").addEventListener("change",name)
+      function name(){
+          var selected = document.querySelector("#sort").value
+          if(selected=="lth"){
+              data.sort(function(a,b){
+                  var x = a.name.toUpperCase()
+                  var y = b.name.toUpperCase()
+                  if(x>y){
+                      return 1
+                  }
+                  if(x<y){
+                      return -1
+                  }
+                  return 0
+              })
+              console.log(data)
+              display(data)
+          }
+
+          if(selected=="htl"){
+              data.sort(function(a,b){
+                  var x = a.name.toUpperCase()
+                  var y = b.name.toUpperCase()
+                  if(x>y){
+                      return -1
+                  }
+                  if(x<y){
+                      return 1
+                  }
+                  return 0
+              })
+              console.log(data)
+              display(data)
+          }
+      }
+ 
+
+ 
+  
+  function display(data) {
+      
  data.forEach(function(elem) {
+     
       var box = document.createElement("div")
       var image=document.createElement("img")
       image.src = elem.img
@@ -64,6 +136,9 @@ var data=[{img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,
       disc.innerText=elem.disc
       var button = document.createElement("button")
       button.innerText ="ADD TO BASKET"
+      button.addEventListener("click",function(){
+          basket(elem)
+      })
 
       box.append(image,disc,name,button)
       document.querySelector("#container").append(box);
@@ -71,16 +146,34 @@ var data=[{img:"https://assets.myntassets.com/f_webp,dpr_1.5,q_60,w_210,c_limit,
   }
 
   display(data)
- filter.addEventListener("change",function(){
-     if(filter.value=="none")
-     {
-         display(data)
-     }
-     else{
-         var filtered = data.filter(function(elem){
-             return elem.name == filter.value;
-         })
+//  filter.addEventListener("change",function(){
+//      if(filter.value=="none")
+//      {
+//          display(data)
+//      }
+//      else{
+//          var filtered = data.filter(function(elem){
+//              return elem.name == filter.value;
+//          })
 
-         display(filtered)
-     }
- })
+//          display(filtered)
+//      }
+//  })
+
+// document.querySelector("#select").addEventListener("change",brand)
+// function brand (){
+//     var selected = document.getElementById("select").value
+//     var filtered = data.filter(function(elem){
+//         return elem.name == selected
+//     })
+//     display(filtered)
+//     console.log(filtered)
+// }
+
+function basket(elem){
+    window.location.href="..\BasketPage\cart.html";
+    var basketArr=[];
+    basketArr.push(elem)
+    localStorage.setItem("basketobj",JSON.stringify(basketArr));
+    console.log(basketArr);
+}
