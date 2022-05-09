@@ -53,14 +53,14 @@ disc:" 5000"},
 ]
 
 
-var arr = JSON.parse(localStorage.getItem("setitem")) || []
+// var arr = JSON.parse(localStorage.getItem("setitem")) || []
 localStorage.setItem("masai-com",JSON.stringify(data))
 document.querySelector("#select").addEventListener("change",brand)
 function brand (){
 var selected = document.getElementById("select").value
 var filtered = data.filter(function(elem){
 return elem.name == selected
-})
+});
 display(filtered)
 console.log(filtered)
 }
@@ -72,7 +72,7 @@ if(selected=="HTL")
 {
 data.sort(function(a,b){
 return b.disc-a.disc
-})
+});
 display(data)
 console.log(data)
 }
@@ -81,7 +81,7 @@ if(selected=="LTH")
 {
 data.sort(function(a,b){
 return a.disc-b.disc
-})
+});
 display(data)
 console.log(data)
 }
@@ -101,7 +101,7 @@ data.sort(function(a,b){
         return -1
     }
     return 0
-})
+});
 console.log(data)
 display(data)
 }
@@ -117,14 +117,11 @@ data.sort(function(a,b){
         return 1
     }
     return 0
-})
+});
 console.log(data)
 display(data)
 }
 }
-
-
-
 
 function display(data) {
 
@@ -142,11 +139,11 @@ button.innerText ="ADD TO BASKET"
 button.style.cursor="pointer"
 button.addEventListener("click",function(){
 addtocart(elem)
-})
+});
 
 box.append(image,disc,name,button)
 document.querySelector("#container").append(box);
-})
+});
 }
 
 display(data)
@@ -154,4 +151,4 @@ function addtocart(elem){
 arr.push(elem)
 localStorage.setItem("setitem",JSON.stringify(arr))
 window.location.href="cart.html"
-}
+};
